@@ -11200,8 +11200,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  filter: blur(3px);
-  -webkit-filter: blur(10px);
+
 }
 
 .masthead h1 {
