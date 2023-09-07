@@ -82,48 +82,37 @@
     <section class="projects-section bg-light" id="projects">
         <div class="container">
             <h1 class="mx-auto my-0 text-uppercase heading">Projects</h1>
-            <!--------------------------------------------- Project One Row ------------------------------------------------------------------>
+            <!------------------------------------------------------------------ Dyanmic Project---------------------------------------- -->
+            {%for i in project %}
             <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-                <div class="col-xl-8 col-lg-7"><img tyle=" border-radius: 10px; border: 1px solid black ;"
-                        class="img-fluid mb-3 mb-lg-0" src="static/assets/img/EbookFlix.png" alt="" /></div>
+                <div class="col-xl-8 col-lg-7"><img style=" border-radius: 10px; border: 1px solid black ;"
+                        class="img-fluid mb-3 mb-lg-0" src="/media/{{i.img}}" alt="" /></div>
                 <div class="col-xl-4 col-lg-5">
                     <div class="featured-text text-center text-lg-left">
-                        <h4><b>Project:</b> <br>E-BookFlix</h4>
-                        <p class="text-black-50 mb-0">An online Free E-book developed in django which allow users to
-                            read books online :)
-                            Vision to turn this open source project that everyone can read and publish book freely.And
-                            help new artists display their works to the public. August 28th, 2022.</p>
+                        <h4><b>Project:</b> <br>{{i.title}}</h4>
+                        <p class="text-black-50 mb-0">{{i.description}}</p>
                         <span class="margintop">
-                            <a class="btn btn-primary projectbtn" href="https://e-bookflix.herokuapp.com/">Live
+                            <a class="btn btn-primary projectbtn" href="{{i.liveproject}}">Live
                                 Project</a>
-                            <a class="btn btn-primary projectbtn" href="https://github.com/huzefaTaj/EbookFlix">Code</a>
+                            <a class="btn btn-primary projectbtn" href="{{i.code}}">Code</a>
                         </span>
                     </div>
                 </div>
             </div>
             <hr>
-            <!--------------------------------------------- Project two Row ------------------------------------------------------------------>
-            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-                <div class="col-xl-8 col-lg-7"><img style=" border-radius: 10px; border: 1px solid black ;"
-                        class="img-fluid mb-3 mb-lg-0" src="static/assets/img/Eshopy.png" alt="" />
-                </div>
-                <div class="col-xl-4 col-lg-5">
-                    <div class="featured-text text-center text-lg-left">
-                        <h4><b>Project:</b> <br>E-Shopy</h4>
-                        <p class="text-black-50 mb-0">Designed and developed a web application with back-end on Django,
-                            Python and SQLite database Authentication and the SHA-256 hash algorithm make the site
-                            safer. Razor pay API added as a payment gateway
-                            In front-end used JavaScript, HTML, CSS and Bootstrap for user
-                            friendly interface September 1st, 2022.</p>
-                        <span class="margintop">
-                            <a class="btn btn-primary projectbtn" href="https://eshopyy.herokuapp.com/store">Live
-                                project</a>
-                            <a class="btn btn-primary projectbtn" href="https://github.com/huzefaTaj/E-Shopy">Code</a>
-                        </span>
-                    </div>
-                </div>
+            {% endfor %}
+
+
+
+
+
             </div>
+
+            
+
     </section>
+                
+            </div>
     <!--------------------------------------------------------- Contact Form -------------------------------------------------------->
     <section class="signup-section" id="signup">
         <div class="container">
