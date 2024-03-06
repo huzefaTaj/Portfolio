@@ -1,176 +1,204 @@
-<!DOCTYPE html lang="en">
+<!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <title>Portfolio</title>
+        <link rel="stylesheet" href="static/assets/css/styles.css">
 
-    <!-- Icon credit to Freepik on flaticon.com-->
-    <!-- <link rel="icon" type="image/x-icon" href="assets/img/leaf.png" /> -->
+        <!-- =====BOX ICONS===== -->
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="static/css/styles.css" rel="stylesheet" />
-</head>
-
-
-<body id="page-top">
-    <!---------------------------------------------------- Navigation ---------------------------------------------------->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-        <div class="container">
-            <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a> -->
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link text-white-50 btnsmalllang" href="/index-pt.html"></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!---------------------------------------------------- Masthead ---------------------------------------------------->
-    <header class="masthead">
-        <div class="container d-flex h-100 align-items-center">
-            <div class="mx-auto text-center">
-                <h1 class="mx-auto my-0 text-uppercase">HUZEFA Taj</h1>
-                <h2 class="text-white-50 mx-auto mt-2 mb-5">Sotware Developer / Web Developer</h2>
-                <a class="btn btn-dark js-scroll-trigger" href="#about">About Me</a>
-            </div>
-        </div>
-    </header>
-    <!---------------------------------------------------- About----------------------------------------------------->
-    <section class="about-section text-center" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 style="color: white;">Hola!!</h2>
-                    <p class="text-white-50">
-
-                        I'm a young, passionate Developer having working experience in the IT industry. Strong knowledge
-                        of clean code, UI/UX designs and a solid knowledge of cloud computing. My goal is to always
-                        create products which deliver a perfect performance experience.
-                    <div class="social justify-content-center">
-                        <span><a class="btn btn-secondary" href="https://huzefa001.pythonanywhere.com/"
-                                target="_blank">Certificates</a></span>
-                    </div>
-
-                    <div class="text-white-50 margintop latestprojects">Check out my latest projects below <span
-                            class="object">&#11015</span></div>
-                    </p>
+        <title>Portfolio website complete</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    Huzefa Taj
                 </div>
-            </div>
-            <img class="img-fluid" style="height: 160px;" alt="" />
-        </div>
-    </section>
-    <!---------------------------------------------------- Projects ---------------------------------------------------->
-    <section class="projects-section bg-light" id="projects">
-        <div class="container">
-            <h1 class="mx-auto my-0 text-uppercase heading">Projects</h1>
-            <!------------------------------------------------------------------ Dyanmic Project---------------------------------------- -->
-            {%for i in project %}
-            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-                <div class="col-xl-8 col-lg-7"><img style=" border-radius: 10px; border: 1px solid black ;"
-                        class="img-fluid mb-3 mb-lg-0" src="/media/{{i.img}}" alt="" /></div>
-                <div class="col-xl-4 col-lg-5">
-                    <div class="featured-text text-center text-lg-left">
-                        <h4><b>Project:</b> <br>{{i.title}}</h4>
-                        <p class="text-black-50 mb-0">{{i.description}}</p>
-                        <span class="margintop">
-                            <a class="btn btn-primary projectbtn" href="{{i.liveproject}}">Live
-                                Project</a>
-                            <a class="btn btn-primary projectbtn" href="{{i.code}}">Code</a>
-                        </span>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hola!!<br>I'am <span class="home__title-color">Huzefa Taj</span><br> <span id="app" ></span></h1>
+
+                    <a href="#contact" class="button">Contact</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/huzefa-taj-5554631b5/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                   
+                    <a href="https://github.com/huzefaTaj" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                </div>
+
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 479" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="50" y="102" href="../static/assets/img/me.png"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="../static/assets/img/avatar.png" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I'am Huzefa Taj</h2>
+                        <p class="about__text">I'm a young, passionate Developer having working experience in the IT industry. Strong knowledge of clean code, UI/UX designs and a solid knowledge of cloud computing. My goal is to always create products which deliver a perfect performance experience.</p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">Top 5 Profesional Skills</h2>
+                         <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-python skills__icon'></i>
+                                <span  class="skills__name">Python 3</span>
+                            </div>
+                           
+                           
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-django skills__icon'></i>
+                                <span class="skills__name">Django</span>
+                            </div>
+                         
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-react skills__icon' ></i>
+                                <span class="skills__name">React Js</span>
+                            </div>
+                         
+                          
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-postgresql skills__icon' ></i>
+                                
+                                <span class="skills__name">postgresql</span>
+                            </div>
+                        
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-aws skills__icon' ></i>
+                                
+                                <span class="skills__name">AWS</span>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    
+                    <div>              
+                        <img src="static/assets/img/work3.jpg" alt="" class="skills__img">
                     </div>
                 </div>
-            </div>
-            <hr>
-            {% endfor %}
+            </section>
 
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Work</h2>
 
+                <div class="work__container bd-grid">
+                 
+                    {%for i in project %}
+                    <a href="{{i.liveproject}}" class="work__img">
+                        <img src="/media/{{i.img}}" alt="">
+                        <h3   class="skills__subtitle" style=" text-align: center;"> {{ i.title }}</h3>
+                       
+                        
+                    </a>
+                    {% endfor %}
+                </div>
+            </section>
 
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
 
+                <div class="contact__container bd-grid">
+                    <form  id="form" method="post" action="/" class="contact__form">
+                        {% csrf_token %}
+                        <input id="n" name="name"  type="text" placeholder="Name" class="contact__input">
+                        <input id="e" name="email" type="mail" placeholder="Email" class="contact__input">
+                        <textarea id="m" name="message" name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <input id="submit" type="submit" value="Enviar" class="contact__button button">
+                    </form>
+                </div>
+            </section>
+        </main>
 
-            </div>
-
-            
-
-    </section>
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Huzefa Taj</p>
+            <div class="footer__social">
+                <a href="https://www.linkedin.com/in/huzefa-taj-5554631b5/" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/huzefaTaj" class="footer__icon"><i class='bx bxl-github' ></i></a>
                 
             </div>
-    <!--------------------------------------------------------- Contact Form -------------------------------------------------------->
-    <section class="signup-section" id="signup">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-lg-8 mx-auto text-center">
-                    <div><span class="wave bigemoji">&#128231</span></div>
-                    <div class="contactform text-uppercase heading1">Contact Me</div>
-
-                    <div class="formcontainer">
-                        <form id="form" method="post" action="/">
-                            {% csrf_token %}
-                            <!-- allows function submitForm to run when it is being submitted-->
-                            <input id="n" name="name" class="formelements" type="text" placeholder="NAME" required>
-                            <br>
-                            <input id="e" name="email" class="formelements" type="email" placeholder="E-MAIL" required>
-                            <br>
-                            <textarea id="m" name="message" class="formelements" type="text"
-                                placeholder="WRITE YOUR MESSAGE HERE"
-                                oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'
-                                required></textarea>
-                            <br>
-                            <input id="submit" class="btn" type="submit">
-                            <div id="status"></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--------------------------------------------- Social Media ---------------------------------------------------------------->
-    <section class="contact-section bg-black">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-3 mb-md-0">
+            <p class="footer__copy">Copyright © HuzefaTaj 2024</p>
+        </footer>
 
 
-                </div>
-            </div>
-            <div class="social d-flex justify-content-center">
-                <a class="mx-2 v-align" href="https://www.linkedin.com/in/huzefa-taj-5554631b5/"><i
-                        class="fab fa-linkedin"></i></a>
-                <a class="mx-2 v-align" href="https://github.com/huzefaTaj"><i class="fab fa-github"></i></a>
-            </div>
-        </div>
-    </section>
-    <!-- Footer-->
-    <footer class="footer bg-black small text-center text-white-50">
-        <div class="container">Copyright © HuzefaTaj 2022</div>
-    </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Third party plugin JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <!-- Validation Script for Contact Form-->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="static/js/scripts.js"></script>
-</body>
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+        <script>
+            var app = document.getElementById('app');
 
+var typewriter = new Typewriter(app, {
+    loop: true
+});
+
+typewriter.typeString('Software Developer')
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString('Web Developer')
+    
+    .pauseFor(2500)
+    .start();
+        </script>
+
+        <!--===== MAIN JS =====-->
+        <script src="static/assets/js/main.js"></script>
+    </body>
 </html>

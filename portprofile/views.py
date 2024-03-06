@@ -16,6 +16,7 @@ def index(request):
         print(usermail)
         name = request.POST['name']
         print(name)
-        send_mail('Contact Form', f'Name: {name} \n \n Email: {usermail} \n \n Message: {message}', settings.EMAIL_HOST_USER, [
+        send_mail('Portfolio Mail', f'Name: {name} \n \n Email: {usermail} \n \n Message: {message}', settings.EMAIL_HOST_USER, [
                   'huzefataj8@gmail.com'], fail_silently=False)
+        return redirect(index)
     return render(request, 'index.html', params)

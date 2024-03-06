@@ -25,14 +25,14 @@ SECRET_KEY = 'dbwf08ytpn55xz#75xtzpjuiyh*e1*)cx&%c+s-8!yic+_0i-8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='tajhuzefa91@gmail.com'
-EMAIL_HOST_PASSWORD='rfdkcrloeymblscr'
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'tajhuzefa91@gmail.com'
+EMAIL_HOST_PASSWORD = 'rfdkcrloeymblscr'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-ALLOWED_HOSTS = ['127.0.0.1','huzefatajportfolio.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'https://huzefadev.pythonanywhere.com/']
 
 
 # Application definition
@@ -63,7 +63,7 @@ ROOT_URLCONF = 'portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,6 +127,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS=[os.path.join('static')]
-MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
+STATICFILES_DIRS = [os.path.join('static')]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
