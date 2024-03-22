@@ -19,5 +19,6 @@ from . import views
 
 urlpatterns = [
     path('phynix/', admin.site.urls),
-    path('', views.index, name='index')
+    path('', views.index, name='index'),
+    path('cv/', views.cv, name='cv')
 ]

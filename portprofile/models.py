@@ -9,3 +9,6 @@ class Project(models.Model):
     img = models.ImageField(upload_to="media/images", default="")
     liveproject = models.URLField(max_length=500)
     code = models.URLField(max_length=500)
+
+class Seo(models.Model):
+    clicks=models.IntegerField(blank=True)
